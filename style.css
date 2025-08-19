@@ -1,0 +1,730 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0f0f1a; /* dark background behind sections */
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header / Navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background: linear-gradient(90deg, #1e3a8a, #4b0082);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header img {
+  height: 50px;
+}
+
+/* Unique Nav Styling */
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  position: relative;
+  margin-left: 30px;
+  font-weight: 600;
+}
+
+header nav ul li a {
+  color: white;
+  padding: 5px 0;
+  position: relative;
+  transition: 0.3s;
+  font-size: 0.95rem;
+}
+
+header nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #facc15; /* golden accent */
+  transition: 0.3s;
+}
+
+header nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Dropdown Placeholder (if needed in future) */
+header nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: rgba(30, 30, 60, 0.95);
+  border-radius: 6px;
+  min-width: 180px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+header nav ul li:hover ul {
+  display: block;
+}
+
+header nav ul li ul li {
+  margin: 0;
+}
+
+header nav ul li ul li a {
+  padding: 10px 15px;
+  display: block;
+  color: #e5e7eb;
+}
+
+header nav ul li ul li a:hover {
+  background: #3b3b7a;
+}
+
+/* Hero Section (unchanged blue gradient) */
+.hero {
+  padding: 100px 5%;
+  text-align: center;
+  color: white;
+  background: linear-gradient(rgba(30,58,138,0.8), rgba(59,130,246,0.8)), url('candle-range.jpg') center/cover no-repeat;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero .btn {
+  background: linear-gradient(90deg, #facc15, #eab308);
+  color: #1f2937;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background: linear-gradient(90deg, #eab308, #facc15);
+}
+
+/* Main Sections Glassmorphism Dark Gradient */
+section {
+  padding: 50px 5%;
+  background: linear-gradient(135deg, #0f0f1a, #1e3a8a, #4b0082);
+  border-radius: 12px;
+  margin-bottom: 30px;
+  color: #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+/* Section Headings */
+section h2 {
+  font-size: 2rem;
+  color: #facc15;
+  margin-bottom: 20px;
+}
+
+/* Paragraphs */
+section p {
+  margin-bottom: 15px;
+  color: #d1d5db;
+}
+
+/* Courses / Quick Links Cards */
+.courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.course {
+  background: linear-gradient(135deg, rgba(30,30,50,0.85), rgba(30,30,60,0.85), rgba(75,0,130,0.85));
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  transition: 0.3s;
+  color: #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.course:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+.course h3 {
+  margin-bottom: 15px;
+  color: #facc15;
+}
+
+.course p {
+  color: #d1d5db;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, #1e3a8a, #4b0082);
+  color: white;
+  text-align: center;
+  padding: 30px 5%;
+}
+
+footer a:hover {
+  color: #facc15;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav ul {
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  header nav ul li {
+    margin: 5px 15px 0 0;
+  }
+
+  header nav ul li ul {
+    position: static;
+  }
+}
+
+/* === Academy Page Clean Style === */
+body.academy-page {
+  background-color: #f5f7ff; /* soft light background */
+  color: #1f2937; /* dark text for readability */
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+body.academy-page .hero {
+  padding: 80px 5%;
+  text-align: center;
+  background: linear-gradient(135deg, #3b82f6, #2563eb); /* blue gradient */
+  color: white;
+  border-radius: 12px;
+}
+
+body.academy-page .hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+body.academy-page .hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+/* Academy Content Section */
+body.academy-page .academy-content {
+  padding: 50px 5%;
+  background-color: white;
+  border-radius: 12px;
+  margin: 30px auto;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+body.academy-page .academy-content h2 {
+  font-size: 2rem;
+  color: #2563eb; /* blue accent */
+  margin-bottom: 20px;
+}
+
+/* Tables */
+body.academy-page .course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+body.academy-page .course-table th, 
+body.academy-page .course-table td {
+  padding: 12px 15px;
+  border: 1px solid #e0e7ff;
+  text-align: left;
+  color: #1f2937;
+}
+
+body.academy-page .course-table th {
+  background: #3b82f6;
+  color: white;
+  font-weight: 600;
+}
+
+/* Form Styling */
+body.academy-page .enroll-form {
+  display: flex;
+  flex-direction: column;
+}
+
+body.academy-page .enroll-form label {
+  margin: 10px 0 5px 0;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+body.academy-page .enroll-form input, 
+body.academy-page .enroll-form select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: white;
+  color: #1f2937;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+body.academy-page .enroll-form input::placeholder {
+  color: #94a3b8;
+}
+
+body.academy-page .enroll-form button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+body.academy-page .enroll-form button:hover {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+}
+
+/* CTA Box */
+body.academy-page .cta-box {
+  margin-top: 30px;
+  padding: 25px;
+  background: #e0e7ff;
+  border-radius: 12px;
+  text-align: center;
+}
+
+body.academy-page .cta-box h3 {
+  color: #1e40af; /* darker blue */
+  margin-bottom: 10px;
+}
+
+body.academy-page .cta-box p {
+  color: #1f2937;
+  margin-bottom: 15px;
+}
+
+body.academy-page .cta-box .btn {
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+body.academy-page .cta-box .btn:hover {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+}
+
+/* Footer */
+body.academy-page footer {
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  color: white;
+  text-align: center;
+  padding: 25px 5%;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  body.academy-page .nav-links {
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  body.academy-page .nav-links li {
+    margin: 8px 15px 0 0;
+  }
+}
+/* Academy Course Table Styling */
+.academy-page .course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background: #ffffff; /* white background */
+  color: #1a1a1a;      /* dark text for readability */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.academy-page .course-table th,
+.academy-page .course-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.academy-page .course-table th {
+  background: linear-gradient(135deg, #004aad, #007bff);
+  color: white;
+  font-weight: bold;
+}
+
+.academy-page .course-table tr:hover td {
+  background: rgba(0, 74, 173, 0.1);
+}
+
+/* === About Page Styling (Clean, Premium, Works) === */
+
+/* Hero Section */
+body.about-page .hero {
+  text-align: center;
+  padding: 80px 5%;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border-radius: 12px;
+  margin: 20px 5%;
+}
+
+body.about-page .hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+body.about-page .hero p {
+  font-size: 1.2rem;
+}
+
+/* About & Vision Sections */
+body.about-page .about-content {
+  background: #ffffff; /* White card */
+  padding: 40px 5%;
+  margin: 30px 5%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+body.about-page .about-content h2 {
+  color: #2563eb; /* Blue headings */
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+body.about-page .about-content p {
+  font-size: 1rem;
+  color: #1f2937; /* Dark text */
+  margin-bottom: 15px;
+}
+
+/* CTA Box */
+body.about-page .cta-box {
+  background: linear-gradient(135deg, #c7d2fe, #e0e7ff);
+  margin: 30px 5%;
+  padding: 25px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+body.about-page .cta-box h3 {
+  color: #1e40af;
+  margin-bottom: 10px;
+}
+
+body.about-page .cta-box p {
+  margin-bottom: 15px;
+}
+
+body.about-page .cta-box .btn {
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+body.about-page .cta-box .btn:hover {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+}
+
+/* === Contact Page Form Styling === */
+
+/* Hero Section */
+body .hero {
+  text-align: center;
+  padding: 80px 5%;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border-radius: 12px;
+  margin: 20px 5%;
+}
+
+body .hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+body .hero p {
+  font-size: 1.2rem;
+}
+
+/* Contact Container */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 30px 5%;
+  gap: 30px;
+}
+
+/* Contact Info Card */
+.contact-info {
+  flex: 1 1 300px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.contact-info h2 {
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.contact-info a {
+  color: #3b82f6;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-info a:hover {
+  color: #2563eb;
+}
+
+/* Contact Form Card */
+.contact-form {
+  flex: 1 1 300px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1f2937;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37,99,235,0.3);
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 12px 20px;
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+}
+
+.contact-form .note {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
+/* Add spacing between logo and first nav link ONLY on Contact page */
+body.contact-page nav.navbar .nav-links a:first-child,
+body.contact-page nav.navbar .menu a:first-child {
+  margin-left: 30px; /* Adjust the space as needed */
+}
+
+/* === Responsive Menu === */
+
+/* Hide hamburger by default */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon div {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* For small screens */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  nav ul.show {
+    max-height: 500px; /* dropdown opens */
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+}
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #111;
+  color: #fff;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.site-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Put menu icon on the right */
+nav {
+  margin-left: auto;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  display: block;
+  color: #fff;
+}
+
+/* Dropdown Menu */
+#menu {
+  display: none;
+  list-style: none;
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  background: #222;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#menu li {
+  margin: 10px 0;
+}
+
+#menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Active menu */
+#menu.active {
+  display: flex;
+  flex-direction: column;
+}

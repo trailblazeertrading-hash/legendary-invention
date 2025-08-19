@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trailblazer Trading Academy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo-title">
+      <img src="logo.png" alt="Trailblazer Trading Logo" class="logo">
+      <h1 class="site-name">TRAILBLAZER TRADING</h1>
+    </div>
+    <nav>
+      <!-- Menu Icon -->
+      <div class="menu-icon" id="menu-icon" onclick="toggleMenu()">☰</div>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="academy.html">Academy</a></li>
+        <li><a href="signals.html">Signals</a></li>
+        <li><a href="livetrading.html">Live Trading</a></li>
+        <li><a href="investment.html">Investment</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('candle-range.jpg');">
+    <h1>Welcome to Trailblazer Trading Academy</h1>
+    <p>Master the Candle Range Theory and unlock profitable trading opportunities daily.</p>
+    <a href="academy.html" class="btn">Start Learning</a>
+  </section>
+
+  <!-- About Candle Range Theory -->
+  <section>
+    <h2>What is Candle Range Theory?</h2>
+    <p>
+      Candle Range Theory is a powerful trading approach that focuses on the size of candlesticks 
+      and the behavior of price within their range. By studying how candles expand, contract, 
+      and interact with support and resistance, traders can identify high-probability entries 
+      and exits. Unlike strategies that rely only on indicators, Candle Range Theory uses 
+      raw price action, making it more reliable in fast-moving markets like Gold and EUR/USD.
+    </p>
+    <p>
+      At Trailblazer Trading, we teach you how to read candle ranges, spot liquidity traps, 
+      and align them with market structure. This strategy is especially effective for intraday 
+      traders seeking consistency and precision. Whether you’re new to forex or an experienced 
+      trader, mastering Candle Range Theory will give you a unique edge in the market.
+    </p>
+  </section>
+
+  <!-- Quick Links -->
+  <section>
+    <h2>Explore Our Services</h2>
+    <div class="courses">
+      <div class="course">
+        <h3>📘 Academy</h3>
+        <p>Structured forex education with real examples.</p>
+        <a href="academy.html" class="btn">View Academy</a>
+      </div>
+      <div class="course">
+        <h3>📈 Signals</h3>
+        <p>Get reliable daily signals for major pairs and gold.</p>
+        <a href="signals.html" class="btn">View Signals</a>
+      </div>
+      <div class="course">
+        <h3>🎥 Live Trading</h3>
+        <p>Join our live trading sessions and trade together.</p>
+        <a href="livetrading.html" class="btn">Join Live</a>
+      </div>
+      <div class="course">
+        <h3>💰 Investment</h3>
+        <p>Passive trading investment opportunities.</p>
+        <a href="investment.html" class="btn">View Plans</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Trailblazer Trading Academy. All Rights Reserved.</p>
+    <p>Designed by Trailblazer Team Leader @Noah</p>
+  </footer>
+
+  <!-- JavaScript for Menu -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      const icon = document.getElementById("menu-icon");
+
+      menu.classList.toggle("active");
+
+      // Switch icon between ☰ and ✖
+      if (menu.classList.contains("active")) {
+        icon.textContent = "✖";
+      } else {
+        icon.textContent = "☰";
+      }
+    }
+  </script>
+
+</body>
+</html>
