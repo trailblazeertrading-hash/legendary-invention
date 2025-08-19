@@ -728,3 +728,163 @@ nav {
   display: flex;
   flex-direction: column;
 }
+/* Default hidden menu */
+#menu {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #111;
+  position: absolute;
+  top: 60px; /* below header */
+  right: 0;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Menu items */
+#menu li {
+  border-bottom: 1px solid #333;
+}
+
+#menu li a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+#menu li a:hover {
+  background: #444;
+}
+
+/* When active, show it */
+#menu.active {
+  display: block;
+}
+
+/* Keep menu icon and logo in one line */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #222;
+  color: white;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+/* General body styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  color: #222;
+}
+
+/* Header */
+.site-header {
+  background: #003366; /* deep blue */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 40px;
+}
+
+.site-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Nav menu (slide-in) */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: #002244;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 60px;
+  transition: right 0.3s ease-in-out;
+}
+
+nav ul.active {
+  right: 0;
+}
+
+nav ul li {
+  padding: 15px;
+  border-bottom: 1px solid #444;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Page content */
+.content {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.content h1 {
+  color: #003366;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
